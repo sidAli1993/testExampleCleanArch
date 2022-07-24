@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraintmain"
+                android:layout_margin="@dimen/margin_v_low">
+
+                <TextView
+                    android:id="@+id/tv_head"
+                    style="@style/headTextview"
+                    android:text="047: ronald region"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvdistance"
+                    style="@style/headTextviewnormal"
+                    android:text="047: ronald region"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_head" />
+
+                <ImageView
+                    android:id="@+id/imvbike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_high"
+                    android:src="@drawable/ic_bike"
+                    app:layout_constraintEnd_toStartOf="@+id/imvlock"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvdistance" />
+
+                <ImageView
+                    android:id="@+id/imvlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_high"
+                    android:src="@drawable/ic_lock"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imvbike"
+                    app:layout_constraintTop_toBottomOf="@id/tvdistance" />
+
+                <TextView
+                    android:id="@+id/tvtext1"
+                    style="@style/headTextviewnormal"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_low"
+                    android:text="Available bikes"
+                    android:textSize="@dimen/text_normal"
+                    app:layout_constraintEnd_toStartOf="@+id/tvtext2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imvbike" />
+
+                <TextView
+                    android:id="@+id/tvtext2"
+                    style="@style/headTextviewnormal"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_low"
+                    android:text="Available Places"
+                    android:textSize="@dimen/text_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvtext1"
+                    app:layout_constraintTop_toBottomOf="@+id/imvlock" />
+
+                <TextView
+                    android:id="@+id/tvvalone"
+                    style="@style/headTextview"
+                    android:text="45"
+                    android:textSize="30sp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/lightColorGreen"
+                    app:layout_constraintEnd_toStartOf="@+id/tvvaltwo"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvtext1" />
+
+                <TextView
+                    android:id="@+id/tvvaltwo"
+                    style="@style/headTextview"
+                    android:text="7"
+                    android:textSize="30sp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvvalone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvtext2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
